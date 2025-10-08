@@ -1,5 +1,5 @@
 ---
 title: beer2
-createTime: 2025/06/08 14:48:13
-permalink: /article/0tups293/
+createTime: 2025/06/08 19:39:56
+permalink: /test2/beer2/
 ---
