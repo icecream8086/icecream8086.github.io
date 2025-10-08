@@ -25,9 +25,9 @@ jobs:
           # 缓存 npm 依赖
           cache: npm
 
-      # 安装依赖
+      # 安装依赖 (使用 --legacy-peer-deps 解决版本冲突)
       - name: Install Dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       # 运行构建脚本
       - name: Build VuePress site
