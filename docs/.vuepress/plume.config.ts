@@ -39,6 +39,19 @@ export default defineThemeConfig({
   // nextPage: true,   // 是否启用下一页链接
   // createTime: true, // 是否显示文章创建时间
 
+  /**
+   * 博客
+   * @see https://theme-plume.vuejs.press/config/basic/#blog
+   */
+  blog: {
+    postList: true, // 是否启用文章列表页
+    tags: true, // 是否启用标签页
+    archives: true, // 是否启用归档页
+    categories: true, // 是否启用分类页
+    postCover: 'right', // 文章封面位置
+    pagination: 15, // 每页显示文章数量
+  },
+
   /* 站点页脚 */
   footer: {
     message: 'Power by <a target="_blank" href="https://v2.vuepress.vuejs.org/">VuePress</a> & <a target="_blank" href="https://theme-plume.vuejs.press">vuepress-theme-plume</a>',
