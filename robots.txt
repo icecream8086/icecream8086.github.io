@@ -1,0 +1,3 @@
+Sitemap: https://www.hexgrid.ink/sitemap.xml
+User-agent:*
+Disallow:
