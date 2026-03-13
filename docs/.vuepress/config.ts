@@ -18,8 +18,10 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
 import { revealJsPlugin } from '@vuepress/plugin-revealjs'
+import { markdownChartPlugin } from '@vuepress/plugin-markdown-chart'
+import { shikiPlugin } from '@vuepress/plugin-shiki'
 
-const DEBUG = true
+const DEBUG = false
 const BASE_PATH = 'icecream8086'
 const BASE_URL = DEBUG ? '/' : `/${BASE_PATH}/`
 // const BASE_URL = '/'
@@ -40,10 +42,10 @@ export default defineUserConfig({
   },
 
   head: [
-    ['link', { 
-      rel: 'icon', 
-      type: 'image/png', 
-      href: 'https://theme-plume.vuejs.press/favicon-32x32.png' 
+    ['link', {
+      rel: 'icon',
+      type: 'image/png',
+      href: 'https://theme-plume.vuejs.press/favicon-32x32.png'
     }],
   ],
 
@@ -196,7 +198,7 @@ export default defineUserConfig({
      * 资源链接替换
      * @see https://theme-plume.vuejs.press/guide/features/replace-assets/
      */
-    replaceAssets: CDN_ENV ? 'https://r2.hexgrid.ink/' : false
+    replaceAssets: CDN_ENV ? 'https://r2.hexgrid.ink/public/preview' : false
 
 
     /**
@@ -208,6 +210,16 @@ export default defineUserConfig({
   plugins: [
     revealJsPlugin({
       // 插件选项
+    }),
+    shikiPlugin({
+      // 配置项
+      langs: ['ts', 'json', 'vue', 'md', 'bash', 'diff'],
+    }),
+    markdownChartPlugin({
+      // 启用 Mermaid
+      mermaid: true,
+      // 启用 PlantUML https://plantuml.com/zh/
+      plantuml: true,
     }),
   ],
 })
