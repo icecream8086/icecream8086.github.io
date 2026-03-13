@@ -31,7 +31,7 @@ FROM docker.io/mysql:8.0
 ```
 
 ::: center
-![ ](/public/comic_icon/common/i_have_a_plan.jpg)
+![ ](/images/comic_icon/i_have_a_plan.jpg)
 :::
 
 **优势**：
