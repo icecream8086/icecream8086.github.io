@@ -21,7 +21,7 @@ import { revealJsPlugin } from '@vuepress/plugin-revealjs'
 import { markdownChartPlugin } from '@vuepress/plugin-markdown-chart'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 
-const DEBUG = false
+const DEBUG = true
 const BASE_PATH = 'icecream8086'
 const BASE_URL = DEBUG ? '/' : `/${BASE_PATH}/`
 // const BASE_URL = '/'
